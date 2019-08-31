@@ -20,6 +20,5 @@ int main(){
     for(i = 0; i<3;i++)
         printf("\nsoma[%d]: %d ", i, s[i]);
 
-
     return 0;
 }
