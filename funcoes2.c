@@ -18,7 +18,7 @@ int main(){
     s = somaNumeros(v1, v2);
 
     for(i = 0; i<3;i++)
-        printf("\nsoma[%d]: %d", i, s[i]);
+        printf("\nsoma[%d]: %d ", i, s[i]);
 
 
     return 0;
