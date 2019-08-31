@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+ 
 /* void somaNumeros(int *a, int *b, int *c){
     int i;
     for(i=0;i<3;i++, a++, b++, c++)
