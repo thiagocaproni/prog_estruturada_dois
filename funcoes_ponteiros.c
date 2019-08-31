@@ -33,7 +33,7 @@ int main(){
     somaNumeros(v1, v2, soma);
 
     for(i = 0; i<3;i++)
-        printf("\nsoma[%d]: %d ", i, soma[i]);
+        printf("\nsoma[%d]: %d", i, soma[i]);
 
 
     return 0;
