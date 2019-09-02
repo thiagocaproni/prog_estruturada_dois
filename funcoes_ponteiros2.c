@@ -4,8 +4,9 @@
 int* somaNumeros(int a[], int b[]){
     int i;
     int *c = malloc(3*sizeof(int));
-    for(i=0;i<3;i++)
-        *(c+i) = *(a+i) + *(b+i);
+    for(i=0;i<3;i++){
+        c[i] = a[i] + b[i];
+     }
 
     return c;
 }
