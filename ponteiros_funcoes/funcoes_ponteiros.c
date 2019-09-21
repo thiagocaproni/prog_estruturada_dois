@@ -26,6 +26,7 @@ int* somaNumeros(int a[], int b[], int c[]){
     return c; 
 }
 
+
 int main(){ 
     int v1[] = {1, 2, 3};
     int v2[] = {1, 2, 3};
