@@ -1,3 +1,6 @@
 .vscode/launch.json
 ponteiros_funcoes/funcoes_ponteiros
 ponteiros_funcoes/funcoes_ponteiros2
+argv/matriz.c
+argv/vetor.c
+argv/tresnomes.c
