@@ -35,8 +35,14 @@ raizes calcula2Grau(coeficientes coef){
 }*/
 
 raizes* calcula2Grau(coeficientes coef){
+    raizes r;
     raizes *res = malloc(sizeof(raizes));
+    raizes **vet = malloc(10*sizeof(raizes *));
+   
     double delta;
+
+    vet[0] = &r;
+    vet[0]->x1 = 10;
 
     delta = pow(coef.b, 2) - (4*coef.a*coef.c);
     res->x1 = ((-coef.b) + sqrt(delta)) / (2*coef.a);
