@@ -5,7 +5,7 @@ typedef struct cont{
 	char nome[100];
 	char endereco[200];
 	int idade;
-}Contato;
+}Contato; 
 
 int exibeMenu();
 int getFileSize();
