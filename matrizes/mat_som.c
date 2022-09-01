@@ -1,43 +1,57 @@
 #include <stdio.h>
 
-const int MAXLIN=12;
-const int MAXCOL=12;
+#define MAX 12
 
-void lerMatriz(float m[][MAXCOL]){
-    int i, j;
-    for(i=0; i<MAXLIN; i++)
-        for(j=0; j<MAXCOL; j++)
-            scanf("%f", &m[i][j]);
-}
-
-float soma(float m[][MAXCOL], int l){
-    int j;
-    float soma=0;
-    for(j=0; j<MAXCOL; j++)
-        soma = soma + m[l][j];
-    return soma;
-}
+float soma(float m[][MAX]);
+float media(float m[][MAX]);
+void compor(float m[][MAX]);
 
 int main() {
-    float mat[MAXLIN][MAXCOL];
-    int l;
-    char op;
-    scanf("%d ", &l);
-    scanf("%c", &op);
+ 
+	float m[MAX][MAX];
+	char c;
+	
+	
+	scanf("%c", &c);
+	switch(c){
+		case 'S': compor(m);
+			  printf("%.1f\n", soma(m));
+			  break;
+		case 'M': compor(m);
+			  printf("%.1f\n", media(m));
+			  break;
+	}
 
-    lerMatriz(mat);
-    
-    switch (op)
-    {
-        case 'S':
-                printf("%.1f", soma(mat, l));
-            break;
-        case 'M':
-                printf("%.1f", soma(mat, l)/MAXCOL);
-            break;
-        default:
-            break;
-    }
-    
+  
+ 		
 	return 0;
+}
+
+void compor(float m[][MAX]){
+	int i, j;
+	for(i = 0; i < MAX; ++i)
+		for(j = 0; j < MAX; ++j)
+			scanf("%f",&m[i][j]);
+
+}
+
+float soma(float m[][MAX]){
+	int i, j;
+	float s = 0.0;
+	for(i = 0; i < MAX; ++i)
+		for(j = i+1; j < MAX; ++j)
+			s += m[i][j];
+	return s;
+}
+
+float media(float m[][MAX]){
+
+	int i, j, qtd = 0;
+	float s = 0.0;
+	for(i = 0; i < MAX; ++i)
+		for(j = i+1; j < MAX; ++j){
+			s += m[i][j];
+			qtd++;
+		}
+	return s/qtd;
 }
